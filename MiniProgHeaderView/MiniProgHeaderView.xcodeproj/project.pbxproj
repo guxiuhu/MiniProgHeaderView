@@ -13,6 +13,14 @@
 		96A503A62201DD930075158A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A503A52201DD930075158A /* Assets.xcassets */; };
 		96A503A92201DD930075158A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A503A72201DD930075158A /* LaunchScreen.storyboard */; };
 		96A503AC2201DD930075158A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A503AB2201DD930075158A /* main.m */; };
+		96A503C02201DFF40075158A /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503B62201DFF40075158A /* StickyHeaderView.swift */; };
+		96A503C12201DFF40075158A /* HeaderShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503B72201DFF40075158A /* HeaderShadowView.swift */; };
+		96A503C22201DFF40075158A /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503B92201DFF40075158A /* UIScrollView+Extension.swift */; };
+		96A503C32201DFF40075158A /* UIEdgeInsets+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BA2201DFF40075158A /* UIEdgeInsets+Equatable.swift */; };
+		96A503C42201DFF40075158A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BC2201DFF40075158A /* MenuItem.swift */; };
+		96A503C52201DFF40075158A /* MenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BD2201DFF40075158A /* MenuViewDelegate.swift */; };
+		96A503C62201DFF40075158A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BE2201DFF40075158A /* MenuCell.swift */; };
+		96A503C72201DFF40075158A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BF2201DFF40075158A /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,15 @@
 		96A503A82201DD930075158A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96A503AA2201DD930075158A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A503AB2201DD930075158A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96A503B32201DFF40075158A /* Persei.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persei.h; sourceTree = "<group>"; };
+		96A503B62201DFF40075158A /* StickyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
+		96A503B72201DFF40075158A /* HeaderShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderShadowView.swift; sourceTree = "<group>"; };
+		96A503B92201DFF40075158A /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		96A503BA2201DFF40075158A /* UIEdgeInsets+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Equatable.swift"; sourceTree = "<group>"; };
+		96A503BC2201DFF40075158A /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		96A503BD2201DFF40075158A /* MenuViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewDelegate.swift; sourceTree = "<group>"; };
+		96A503BE2201DFF40075158A /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		96A503BF2201DFF40075158A /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,7 @@
 		96A5039B2201DD920075158A /* MiniProgHeaderView */ = {
 			isa = PBXGroup;
 			children = (
+				96A503B22201DFF40075158A /* Persei */,
 				96A5039C2201DD920075158A /* AppDelegate.h */,
 				96A5039D2201DD920075158A /* AppDelegate.m */,
 				96A5039F2201DD920075158A /* ViewController.h */,
@@ -69,6 +87,54 @@
 				96A503AB2201DD930075158A /* main.m */,
 			);
 			path = MiniProgHeaderView;
+			sourceTree = "<group>";
+		};
+		96A503B22201DFF40075158A /* Persei */ = {
+			isa = PBXGroup;
+			children = (
+				96A503B32201DFF40075158A /* Persei.h */,
+				96A503B42201DFF40075158A /* Source */,
+			);
+			path = Persei;
+			sourceTree = "<group>";
+		};
+		96A503B42201DFF40075158A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				96A503B52201DFF40075158A /* Core */,
+				96A503B82201DFF40075158A /* Extension */,
+				96A503BB2201DFF40075158A /* Menu */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		96A503B52201DFF40075158A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				96A503B62201DFF40075158A /* StickyHeaderView.swift */,
+				96A503B72201DFF40075158A /* HeaderShadowView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		96A503B82201DFF40075158A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				96A503B92201DFF40075158A /* UIScrollView+Extension.swift */,
+				96A503BA2201DFF40075158A /* UIEdgeInsets+Equatable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		96A503BB2201DFF40075158A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				96A503BC2201DFF40075158A /* MenuItem.swift */,
+				96A503BD2201DFF40075158A /* MenuViewDelegate.swift */,
+				96A503BE2201DFF40075158A /* MenuCell.swift */,
+				96A503BF2201DFF40075158A /* MenuView.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A503C32201DFF40075158A /* UIEdgeInsets+Equatable.swift in Sources */,
+				96A503C02201DFF40075158A /* StickyHeaderView.swift in Sources */,
+				96A503C22201DFF40075158A /* UIScrollView+Extension.swift in Sources */,
+				96A503C12201DFF40075158A /* HeaderShadowView.swift in Sources */,
 				96A503A12201DD920075158A /* ViewController.m in Sources */,
+				96A503C42201DFF40075158A /* MenuItem.swift in Sources */,
+				96A503C62201DFF40075158A /* MenuCell.swift in Sources */,
+				96A503C72201DFF40075158A /* MenuView.swift in Sources */,
 				96A503AC2201DD930075158A /* main.m in Sources */,
+				96A503C52201DFF40075158A /* MenuViewDelegate.swift in Sources */,
 				96A5039E2201DD920075158A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +368,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiye.MiniProgHeaderView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -311,7 +386,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiye.MiniProgHeaderView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
