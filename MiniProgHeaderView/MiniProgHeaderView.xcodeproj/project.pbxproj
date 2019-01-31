@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40FC637CB05442C93C5A944A /* libPods-MiniProgHeaderView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F007DB5B33EE2AA19343C19 /* libPods-MiniProgHeaderView.a */; };
+		9676B0CB2202956C004E447F /* MenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9676B0CA2202956B004E447F /* MenuViewDelegate.swift */; };
 		96A5039E2201DD920075158A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5039D2201DD920075158A /* AppDelegate.m */; };
 		96A503A12201DD920075158A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A503A02201DD920075158A /* ViewController.m */; };
 		96A503A42201DD920075158A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A503A22201DD920075158A /* Main.storyboard */; };
@@ -17,13 +19,12 @@
 		96A503C12201DFF40075158A /* HeaderShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503B72201DFF40075158A /* HeaderShadowView.swift */; };
 		96A503C22201DFF40075158A /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503B92201DFF40075158A /* UIScrollView+Extension.swift */; };
 		96A503C32201DFF40075158A /* UIEdgeInsets+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BA2201DFF40075158A /* UIEdgeInsets+Equatable.swift */; };
-		96A503C42201DFF40075158A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BC2201DFF40075158A /* MenuItem.swift */; };
-		96A503C52201DFF40075158A /* MenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BD2201DFF40075158A /* MenuViewDelegate.swift */; };
-		96A503C62201DFF40075158A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BE2201DFF40075158A /* MenuCell.swift */; };
 		96A503C72201DFF40075158A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A503BF2201DFF40075158A /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F007DB5B33EE2AA19343C19 /* libPods-MiniProgHeaderView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MiniProgHeaderView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9676B0CA2202956B004E447F /* MenuViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewDelegate.swift; sourceTree = "<group>"; };
 		96A503992201DD920075158A /* MiniProgHeaderView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniProgHeaderView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A5039C2201DD920075158A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96A5039D2201DD920075158A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,10 +40,9 @@
 		96A503B72201DFF40075158A /* HeaderShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderShadowView.swift; sourceTree = "<group>"; };
 		96A503B92201DFF40075158A /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		96A503BA2201DFF40075158A /* UIEdgeInsets+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Equatable.swift"; sourceTree = "<group>"; };
-		96A503BC2201DFF40075158A /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		96A503BD2201DFF40075158A /* MenuViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewDelegate.swift; sourceTree = "<group>"; };
-		96A503BE2201DFF40075158A /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		96A503BF2201DFF40075158A /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		BF173AD0EFA77A3EC3B18ED6 /* Pods-MiniProgHeaderView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniProgHeaderView.debug.xcconfig"; path = "Target Support Files/Pods-MiniProgHeaderView/Pods-MiniProgHeaderView.debug.xcconfig"; sourceTree = "<group>"; };
+		BF9F2CC1C099CF2764033CD5 /* Pods-MiniProgHeaderView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniProgHeaderView.release.xcconfig"; path = "Target Support Files/Pods-MiniProgHeaderView/Pods-MiniProgHeaderView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,17 +50,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FC637CB05442C93C5A944A /* libPods-MiniProgHeaderView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		757416E14D337A28E1AFE5D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF173AD0EFA77A3EC3B18ED6 /* Pods-MiniProgHeaderView.debug.xcconfig */,
+				BF9F2CC1C099CF2764033CD5 /* Pods-MiniProgHeaderView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		96A503902201DD920075158A = {
 			isa = PBXGroup;
 			children = (
 				96A5039B2201DD920075158A /* MiniProgHeaderView */,
 				96A5039A2201DD920075158A /* Products */,
+				757416E14D337A28E1AFE5D9 /* Pods */,
+				ED9C26B3D1BF94CC14D19F18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,12 +141,18 @@
 		96A503BB2201DFF40075158A /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				96A503BC2201DFF40075158A /* MenuItem.swift */,
-				96A503BD2201DFF40075158A /* MenuViewDelegate.swift */,
-				96A503BE2201DFF40075158A /* MenuCell.swift */,
+				9676B0CA2202956B004E447F /* MenuViewDelegate.swift */,
 				96A503BF2201DFF40075158A /* MenuView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		ED9C26B3D1BF94CC14D19F18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F007DB5B33EE2AA19343C19 /* libPods-MiniProgHeaderView.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96A503AF2201DD930075158A /* Build configuration list for PBXNativeTarget "MiniProgHeaderView" */;
 			buildPhases = (
+				1C168F8827F2C0D898AB889D /* [CP] Check Pods Manifest.lock */,
 				96A503952201DD920075158A /* Sources */,
 				96A503962201DD920075158A /* Frameworks */,
 				96A503972201DD920075158A /* Resources */,
+				3D0BA86326A620623CB224C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +222,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C168F8827F2C0D898AB889D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniProgHeaderView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D0BA86326A620623CB224C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniProgHeaderView/Pods-MiniProgHeaderView-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniProgHeaderView/Pods-MiniProgHeaderView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96A503952201DD920075158A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -212,11 +279,9 @@
 				96A503C22201DFF40075158A /* UIScrollView+Extension.swift in Sources */,
 				96A503C12201DFF40075158A /* HeaderShadowView.swift in Sources */,
 				96A503A12201DD920075158A /* ViewController.m in Sources */,
-				96A503C42201DFF40075158A /* MenuItem.swift in Sources */,
-				96A503C62201DFF40075158A /* MenuCell.swift in Sources */,
 				96A503C72201DFF40075158A /* MenuView.swift in Sources */,
 				96A503AC2201DD930075158A /* main.m in Sources */,
-				96A503C52201DFF40075158A /* MenuViewDelegate.swift in Sources */,
+				9676B0CB2202956C004E447F /* MenuViewDelegate.swift in Sources */,
 				96A5039E2201DD920075158A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +422,7 @@
 		};
 		96A503B02201DD930075158A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF173AD0EFA77A3EC3B18ED6 /* Pods-MiniProgHeaderView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -375,6 +441,7 @@
 		};
 		96A503B12201DD930075158A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF9F2CC1C099CF2764033CD5 /* Pods-MiniProgHeaderView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

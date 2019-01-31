@@ -104,7 +104,7 @@ open class StickyHeaderView: UIView {
     }
     
     // MARK: - ScrollView
-    private var scrollView: UIScrollView! { return superview as! UIScrollView }
+    private var scrollView: UIScrollView! { return superview as? UIScrollView }
     
     // MARK: - KVO
     open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -184,6 +184,7 @@ open class StickyHeaderView: UIView {
     @IBInspectable open var contentHeight: CGFloat = DefaultContentHeight {
         didSet {
             if superview != nil {
+                addInsets()
                 layoutToFit()
             }
         }
@@ -193,7 +194,7 @@ open class StickyHeaderView: UIView {
     @IBInspectable open var threshold: CGFloat = 0.3
     
     // MARK: - Content Offset Hanlding
-    private func applyContentContainerTransform(_ progress: CGFloat) {
+    open func applyContentContainerTransform(_ progress: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = -1 / 500
         
