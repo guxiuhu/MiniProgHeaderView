@@ -1,6 +1,7 @@
 // For License please refer to LICENSE file in the root of Persei project
 
 import UIKit
+import AudioToolbox
 
 private var ContentOffsetContext = 0
 private let DefaultContentHeight: CGFloat = 64
@@ -14,7 +15,8 @@ open class StickyHeaderView: UIView {
         addSubview(backgroundImageView)
         addSubview(contentContainer)
 
-        contentContainer.addSubview(shadowView)
+        shadowView = HeaderShadowView(frame: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: contentHeight))
+        contentContainer.addSubview(shadowView!)
         
         clipsToBounds = true
     }
@@ -63,7 +65,7 @@ open class StickyHeaderView: UIView {
         return view
     }()
     
-    private let shadowView = HeaderShadowView(frame: .zero)
+    private var shadowView : HeaderShadowView?
     
     @IBOutlet open var contentView: UIView? {
         didSet {
@@ -221,12 +223,14 @@ open class StickyHeaderView: UIView {
         layoutIfNeeded()
         
         let progress = fractionRevealed()
-        shadowView.alpha = 1 - progress
-
-        applyContentContainerTransform(progress)
+        shadowView!.alpha = 1 - progress
+        
+        //不需要3D动画
+//        applyContentContainerTransform(progress)
     }
     
     @objc private func handlePan(_ recognizer: UIPanGestureRecognizer) {
+        
         if recognizer.state == .ended {
             let value = scrollView.normalizedContentOffset.y * (revealed ? 1 : -1)
             let triggeringValue = contentHeight * threshold
@@ -234,6 +238,11 @@ open class StickyHeaderView: UIView {
             
             if triggeringValue < value {
                 let adjust = !revealed || velocity < 0 && -velocity < contentHeight
+                
+                if !revealed && adjust{
+                    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                }
+                
                 setRevealed(!revealed, animated: true, adjustContentOffset: adjust)
             } else if 0 < bounds.height && bounds.height < contentHeight {
                 UIView.animate(withDuration: 0.3, animations: {
@@ -263,7 +272,7 @@ open class StickyHeaderView: UIView {
         
         contentContainer.frame = CGRect(x: 0, y: containerY, width: bounds.width, height: contentHeight)
         // shadow should be visible outside of bounds during rotation
-        shadowView.frame = contentContainer.bounds.insetBy(dx: -round(contentContainer.bounds.width / 16), dy: 0)
+        shadowView!.frame = contentContainer.bounds.insetBy(dx: -round(contentContainer.bounds.width / 16), dy: 0)
     }
 
     private func layoutToFit() {
@@ -282,7 +291,8 @@ open class StickyHeaderView: UIView {
         }
 
         let output = CGSize(width: scrollView.bounds.width, height: max(height, 0))
-        
+        shadowView!.updateAnimationWithOffsetY(output.height)
+
         return output
     }
 }
