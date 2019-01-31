@@ -184,7 +184,19 @@ open class StickyHeaderView: UIView {
     @IBInspectable open var contentHeight: CGFloat = DefaultContentHeight {
         didSet {
             if superview != nil {
-                addInsets()
+                
+                //增加这个，用于显示菜单的时候动态改变高度
+                if self.revealed{
+                    
+                    UIView.animate(withDuration: 0, delay: 0, options: .beginFromCurrentState, animations: {
+                        self.addInsets()
+                    }, completion: { completed in
+                        UIView.animate(withDuration: 0, animations: {
+                            self.scrollView.contentOffset.y = -self.scrollView.effectiveContentInset.top
+                        })
+                    })
+                }
+                
                 layoutToFit()
             }
         }
