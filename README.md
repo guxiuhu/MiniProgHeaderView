@@ -12,4 +12,5 @@
 * https://github.com/Yalantis/Persei
 * https://github.com/CoderMJLee/MJRefresh
 
-### 效果展示
+### 效果展示
+![image]( https://github.com/guxiuhu/MiniProgHeaderView/blob/master/MiniProgHeaderView/gif/QQ20190131-160338.gif)
