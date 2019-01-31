@@ -2,8 +2,6 @@
 
 import UIKit
 
-private let DefaultContentHeight: CGFloat = 112.0
-
 open class MenuView: StickyHeaderView {
     
     // MARK: - Init
@@ -13,8 +11,6 @@ open class MenuView: StickyHeaderView {
         if backgroundColor == nil {
             backgroundColor = UIColor(red: 51 / 255, green: 51 / 255, blue: 76 / 255, alpha: 1)
         }
-
-        contentHeight = DefaultContentHeight
     }
     
     // MARK: - Delegate

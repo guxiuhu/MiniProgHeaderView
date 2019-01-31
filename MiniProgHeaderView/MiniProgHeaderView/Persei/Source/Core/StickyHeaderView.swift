@@ -4,7 +4,7 @@ import UIKit
 import AudioToolbox
 
 private var ContentOffsetContext = 0
-private let DefaultContentHeight: CGFloat = 64
+private let DefaultContentHeight: CGFloat = 130
 
 open class StickyHeaderView: UIView {
     
@@ -28,7 +28,7 @@ open class StickyHeaderView: UIView {
     }
 
     public convenience init() {
-        self.init(frame: CGRect(x: 0, y: 0, width: 320, height: DefaultContentHeight))
+        self.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: DefaultContentHeight))
     }
     
     required public init?(coder aDecoder: NSCoder) {

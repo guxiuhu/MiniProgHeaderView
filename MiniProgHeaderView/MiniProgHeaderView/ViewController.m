@@ -10,9 +10,10 @@
 #import "MiniProgHeaderView-Swift.h"
 #import <MJRefresh.h>
 
-@interface ViewController ()<MenuViewDelegate>
+@interface ViewController ()<MenuViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property(nonatomic, strong) MenuView *menuVIew;
+@property(nonatomic, strong) UICollectionView *collectionView;
 @end
 
 @implementation ViewController
@@ -20,13 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"小程序";
+    
     self.menuVIew = [MenuView new];
     self.menuVIew.delegate = self;
     [self.menuVIew setBackgroundColor:[UIColor whiteColor]];
-    
-    UIView *contentView = [UIView new];
-    [contentView setBackgroundColor:[UIColor yellowColor]];
-    self.menuVIew.contentView = contentView;
+    self.menuVIew.contentView = self.collectionView;
     
     [self.tableView addSubview:self.menuVIew];
     
@@ -63,9 +63,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row%2 == 0) {
-        [self.menuVIew setContentHeight:160];
+        [self.menuVIew setContentHeight:260];
     } else {
-        [self.menuVIew setContentHeight:80];
+        [self.menuVIew setContentHeight:130];
     }
 }
 
@@ -73,5 +73,43 @@
 - (void)menuWithStatusChanged:(BOOL)status{
     
     self.tableView.mj_footer.hidden = status;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    return 10;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"menuItem" forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor yellowColor];
+    
+    return cell;
+}
+
+///初始化collectionView
+- (UICollectionView *)collectionView{
+    
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.itemSize = CGSizeMake(80, 80);
+        layout.minimumInteritemSpacing = 10;
+        layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+        collectionView.backgroundColor = [UIColor lightGrayColor];
+        collectionView.pagingEnabled = YES;
+        collectionView.showsHorizontalScrollIndicator = NO;
+        [collectionView setDelegate:self];
+        [collectionView setDataSource:self];
+        [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"menuItem"];
+
+        _collectionView = collectionView;
+    }
+    
+    return _collectionView;
 }
 @end
