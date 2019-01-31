@@ -12,4 +12,6 @@
 * https://github.com/Yalantis/Persei
 * https://github.com/CoderMJLee/MJRefresh
 
-### 效果展示
+### 效果展示
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://github.com/guxiuhu/MiniProgHeaderView/blob/master/MiniProgHeaderView/mp4/ScreenRecording_01-31-2019%2015-41-56.MP4)
+
